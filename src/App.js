@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const API_KEY = "8a06005f089efcf6a9a451deb0dcbab3"
+
+const API_ADDRESS = "http://api.brewerydb.com/v2/locations/?key=8a06005f089efcf6a9a451deb0dcbab3"
+//example of address to call random beer.  
+
 class App extends Component {
   render() {
     return (
