@@ -5,7 +5,6 @@ class Title extends React.Component {
     return (
       <div>
         <h1>Austin Brewery Finder</h1>
-        <p>Discover local breweries near you!</p>
       </div>
     );
   }
