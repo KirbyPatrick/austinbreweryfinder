@@ -31,3 +31,4 @@ async componentDidMount() {
 }
 
 export default BreweryList;
+

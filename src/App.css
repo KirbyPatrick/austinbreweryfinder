@@ -1,4 +1,9 @@
 .App {
   padding-top: 4rem;
-  min-height: 100vh
+  min-height: 100vh;
+}
+
+#austinFC {
+  font-family: "Action Cond Medium Web", sans-serif;
+
 }
