@@ -22,7 +22,6 @@ async componentDidMount() {
               <BreweryCard 
               key = {brewery.id}
               name = {brewery.brewery.name}
-              image = {brewery.brewery.images}
               />
             ))}
           </div>
