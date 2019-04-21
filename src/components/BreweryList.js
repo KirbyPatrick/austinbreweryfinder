@@ -22,6 +22,12 @@ async componentDidMount() {
               <BreweryCard 
               key = {brewery.id}
               name = {brewery.brewery.name}
+              streetAddress = {brewery.streetAddress}
+              city = {brewery.locality}
+              locationState = {brewery.region}
+              zipCode = {brewery.postalCode}
+              url = {brewery.brewery.images}
+
               />
             ))}
           </div>

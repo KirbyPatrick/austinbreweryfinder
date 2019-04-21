@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
-import BreweryCard from './components/BreweryCard';
 import DashBoard from './components/DashBoard';
 
 const API_KEY = "8a06005f089efcf6a9a451deb0dcbab3"
@@ -24,10 +23,11 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar/>
+        <SearchBar getBrewery={this.getBrewery} /> <br/>
         <div className="container">
           <DashBoard/>
         </div>
-        {/* <SearchBar getBrewery={this.getBrewery} /> */}
+
       </div>
     );
   }
