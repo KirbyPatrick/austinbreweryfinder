@@ -21,12 +21,16 @@ async componentDidMount() {
             {this.state.brewery.map( brewery => (
               <BreweryCard 
               key = {brewery.id}
-              name = {brewery.brewery.name}
+              name = {brewery.brewery.nameShortDisplay}
               streetAddress = {brewery.streetAddress}
               city = {brewery.locality}
               locationState = {brewery.region}
               zipCode = {brewery.postalCode}
-              url = {brewery.brewery.images}
+              url =  "https://brewerydb-images.s3.amazonaws.com/brewery/nHLlnK/upload_IClwuZ-medium.png"
+              
+              
+              // {brewery.brewery.images.medium}
+             
 
               />
             ))}
