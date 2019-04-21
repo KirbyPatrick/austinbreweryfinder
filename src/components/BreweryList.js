@@ -19,7 +19,11 @@ async componentDidMount() {
         {this.state.brewery ? (
           <div className="row">
             {this.state.brewery.map( brewery => (
-              <BreweryCard />
+              <BreweryCard 
+              key = {brewery.id}
+              name = {brewery.brewery.name}
+              image = {brewery.brewery.images}
+              />
             ))}
           </div>
         ) : (
