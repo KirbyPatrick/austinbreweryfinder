@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import '../App.css';
 import styled from "styled-components";
 
@@ -8,6 +9,10 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
+  -moz-user-select:none;
+  -website-user-select: none;
+  user-select: none;
+  -o-user-select: none;
 `;
 
 class BreweryCard extends React.Component {
@@ -19,7 +24,7 @@ class BreweryCard extends React.Component {
 
   render() {
 
-    const {name, streetAddress, city, locationState, zipCode, url} = this.props;
+    const {name, streetAddress, city, locationState, zipCode, url, breweryIndex} = this.props;
 
     console.log(url);
 
@@ -31,12 +36,14 @@ class BreweryCard extends React.Component {
 
     return(
       <div className="col-med-3 col-sm-3 mb-5">
-        <Card className="card">
-          <h5 className="card-header">{name}</h5> <br/>
-          <img src={url} alt=""/> <br/>
-          <h6 className="card-info mx-auto">{streetAddress}. <br/>
-          {city}, {locationState} {zipCode} </h6>
-        </Card>
+        <Link to={`brewery/${this.state.breweryIndex}`}>
+          <Card className="card">
+            <h5 className="card-header">{name}</h5> <br/>
+            <img src={url} alt=""/> <br/>
+            <h6 className="card-info mx-auto">{streetAddress}. <br/>
+            {city}, {locationState} {zipCode}</h6>
+          </Card>
+        </Link>
       </div>
     );
   }

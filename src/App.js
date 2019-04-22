@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -6,6 +7,7 @@ import './App.css';
 import NavBar from './components/NavBar';
 import SearchBar from './components/SearchBar';
 import DashBoard from './components/DashBoard';
+import Brewery from './components/Brewery';
 
 const API_KEY = "8a06005f089efcf6a9a451deb0dcbab3"
 
@@ -21,14 +23,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <NavBar/>
-        <SearchBar getBrewery={this.getBrewery} /> <br/>
-        <div className="container">
-          <DashBoard/>
+      <Router>
+        <div className="App">
+          <NavBar/>
+          <SearchBar getBrewery={this.getBrewery} /> <br/>
+          <div className="container">
+          <Switch>
+            <Route exact path="/" component={DashBoard} />
+            <Route exact path="/brewery/:breweryIndex" component={Brewery} />
+          </Switch>
+          </div>
         </div>
-
-      </div>
+      </Router>
     );
   }
 }

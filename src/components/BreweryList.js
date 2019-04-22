@@ -21,6 +21,7 @@ async componentDidMount() {
             {this.state.brewery.map( brewery => (
               <BreweryCard 
               key = {brewery.id}
+              breweryIndex = {brewery.brewery.id}
               name = {brewery.brewery.nameShortDisplay}
               streetAddress = {brewery.streetAddress}
               city = {brewery.locality}
