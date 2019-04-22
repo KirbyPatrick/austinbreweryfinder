@@ -13,6 +13,7 @@ async componentDidMount() {
   const res = await axios.get(this.state.url)
   this.setState({brewery: res.data['data']});
 }
+
   render() {
     return (
       <React.Fragment>
@@ -21,7 +22,7 @@ async componentDidMount() {
             {this.state.brewery.map( brewery => (
               <BreweryCard 
               key = {brewery.id}
-              breweryIndex = {brewery.brewery.id}
+              breweryIndex = {brewery.id}
               name = {brewery.brewery.nameShortDisplay}
               streetAddress = {brewery.streetAddress}
               city = {brewery.locality}

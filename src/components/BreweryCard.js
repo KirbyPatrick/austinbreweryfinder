@@ -15,6 +15,18 @@ const Card = styled.div`
   -o-user-select: none;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
+
 class BreweryCard extends React.Component {
   state ={
     name: '',
@@ -36,14 +48,14 @@ class BreweryCard extends React.Component {
 
     return(
       <div className="col-med-3 col-sm-3 mb-5">
-        <Link to={`brewery/${this.state.breweryIndex}`}>
+        <StyledLink to={`brewery/${this.props.breweryIndex}`}>
           <Card className="card">
             <h5 className="card-header">{name}</h5> <br/>
             <img src={url} alt=""/> <br/>
             <h6 className="card-info mx-auto">{streetAddress}. <br/>
-            {city}, {locationState} {zipCode}</h6>
+            {city}, {locationState} {zipCode} <br/> {breweryIndex}</h6>
           </Card>
-        </Link>
+        </StyledLink>
       </div>
     );
   }
