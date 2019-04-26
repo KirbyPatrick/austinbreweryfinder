@@ -15,6 +15,7 @@ async componentDidMount() {
 }
 
   render() {
+    debugger
     return (
       <React.Fragment>
         {this.state.brewery ? (
@@ -28,7 +29,8 @@ async componentDidMount() {
               city = {brewery.locality}
               locationState = {brewery.region}
               zipCode = {brewery.postalCode}
-              url =  "https://brewerydb-images.s3.amazonaws.com/brewery/nHLlnK/upload_IClwuZ-medium.png"
+              url =  {brewery.brewery.images ? brewery.brewery.images.medium : ''}
+              // "https://brewerydb-images.s3.amazonaws.com/brewery/nHLlnK/upload_IClwuZ-medium.png"
               
               
               // {brewery.brewery.images.medium}

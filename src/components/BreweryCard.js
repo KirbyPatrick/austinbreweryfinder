@@ -53,7 +53,7 @@ class BreweryCard extends React.Component {
             <h5 className="card-header">{name}</h5> <br/>
             <img src={url} alt=""/> <br/>
             <h6 className="card-info mx-auto">{streetAddress}. <br/>
-            {city}, {locationState} {zipCode} <br/> {breweryIndex}</h6>
+            {city}, {locationState} {zipCode} <br/> <br/> </h6>
           </Card>
         </StyledLink>
       </div>
