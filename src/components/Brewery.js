@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import BeerCard from "./BeerCard";
+import Tablecolumns from "./Tablecolumns";
 
 class Brewery extends Component {
   state = {
@@ -38,10 +39,11 @@ class Brewery extends Component {
     return (
       <React.Fragment>
       <div>
-        <img src={images.medium} alt="" />
-        <div>{name}</div>
+        <img className="center" src={images.medium} alt="" />
+        <h1>{name}</h1>
         <div>{description}</div>
       </div>
+      <Tablecolumns />
       {this.state.beerList.map(item => (
         <BeerCard
         beer={item}
