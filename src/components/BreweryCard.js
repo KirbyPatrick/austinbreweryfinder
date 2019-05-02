@@ -36,7 +36,7 @@ class BreweryCard extends React.Component {
 
   render() {
 
-    const {name, streetAddress, city, locationState, zipCode, url, breweryIndex} = this.props;
+    const {name, streetAddress, city, locationState, zipCode, url} = this.props;
 
     console.log(url);
 
