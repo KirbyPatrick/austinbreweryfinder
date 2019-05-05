@@ -3,14 +3,13 @@ import axios from "axios";
 import BeerCard from "./BeerCard";
 import Tablecolumns from "./Tablecolumns";
 
-
 class Brewery extends Component {
   state = {
     name: "",
     breweryIndex: "",
     imageUrl: "",
     brewery: "",
-    beerList: [],
+    beerList: []
   };
 
   async componentDidMount() {
@@ -39,17 +38,23 @@ class Brewery extends Component {
     const { name = "", description = "", images = "" } = this.state.brewery;
     return (
       <React.Fragment>
-      <div>
-        <img className="center" src={images.medium} alt="" />
-        <h1>{name}</h1>
-        <div>{description}</div>
-      </div>
-      <Tablecolumns />
-      {this.state.beerList.map(item => (
-        <BeerCard
-        beer={item}
-        />
-      ))}
+        <div>
+          <img className="center" src={images.medium} alt="" />
+          <h1>{name}</h1>
+          <div>{description}</div>
+        </div>
+        <table class="table">
+          <tbody>
+            <Tablecolumns />
+          </tbody>
+        </table>
+        <table class="table">
+          <tbody>
+            {this.state.beerList.map(item => (
+              <BeerCard beer={item} />
+            ))}
+          </tbody>
+        </table>
       </React.Fragment>
     );
   }
