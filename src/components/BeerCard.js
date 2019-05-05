@@ -4,7 +4,6 @@ const beerCard = props => {
   return (
     <React.Fragment>
       <tr>
-        {/* <th scope="row">1</th> */}
         <td>{props.beer.name}</td>
         <td>{props.beer.style ? props.beer.style.name : "Style not listed"}</td>
         <td>{props.beer.abv ? props.beer.abv + "%" : "ABV not listed"}</td>

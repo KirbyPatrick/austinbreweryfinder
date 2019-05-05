@@ -43,12 +43,9 @@ class Brewery extends Component {
           <h1>{name}</h1>
           <div>{description}</div>
         </div>
+        <br />
         <table class="table">
-          <tbody>
-            <Tablecolumns />
-          </tbody>
-        </table>
-        <table class="table">
+          <Tablecolumns />
           <tbody>
             {this.state.beerList.map(item => (
               <BeerCard beer={item} />
