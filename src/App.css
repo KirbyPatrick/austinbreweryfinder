@@ -4,13 +4,22 @@
   background-color: white;
 }
 
-#austinFC {
+#navBarColor {
   font-family: "Action Cond Medium Web", sans-serif;
-  background-color: #69302C;
+  background-color: #69302c;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.titleFont {
+  font-family: "Franklin Gothic Bold";
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
 }

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import BeerCard from "./BeerCard";
 import Tablecolumns from "./Tablecolumns";
+import { Link } from "react-router-dom";
 
 class Brewery extends Component {
   state = {
@@ -35,12 +36,19 @@ class Brewery extends Component {
     //Urls for brewery info
   }
   render() {
-    const { name = "", description = "", images = "" } = this.state.brewery;
+    const {
+      name = "",
+      description = "",
+      images = "",
+      website = ""
+    } = this.state.brewery;
     return (
       <React.Fragment>
         <div>
           <img className="center" src={images.medium} alt="" />
-          <h1>{name}</h1>
+          <a href={website} target="_blank">
+            <h1>{name}</h1>
+          </a>
           <div>{description}</div>
         </div>
         <br />

@@ -1,15 +1,15 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 class NavBar extends React.Component {
   render() {
     return (
-      <nav
-        id="austinFC"
-        className="navbar navbar-expanded-md fixed-top text-white"
-      >
+      <nav id="navBarColor" className="navbar navbar-expanded-md fixed-top">
         <div className="navbar-brand col-sm-3 col-md-2 mr-0 align-items-center">
-          Austin Brewery Finder
+          <Link className="titleFont text-white" to="/">
+            Austin Brewery Finder
+          </Link>
         </div>
       </nav>
     );
