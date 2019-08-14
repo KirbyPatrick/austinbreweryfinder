@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import BeerCard from "./BeerCard";
 import Tablecolumns from "./Tablecolumns";
-import { Link } from "react-router-dom";
+import { API_KEY } from "../App";
 
 class Brewery extends Component {
   state = {
@@ -20,7 +20,7 @@ class Brewery extends Component {
 
   async getBrewery() {
     const { breweryIndex } = this.props.match.params;
-    const url = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/brewery/${breweryIndex}?key=8a06005f089efcf6a9a451deb0dcbab3`;
+    const url = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/brewery/${breweryIndex}?key=${API_KEY}`;
     const res = await axios.get(url);
     this.setState({ brewery: res.data["data"] });
     console.log(res.data);
@@ -29,7 +29,7 @@ class Brewery extends Component {
 
   async getBeers() {
     const { breweryIndex } = this.props.match.params;
-    const url = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/brewery/${breweryIndex}/beers?key=8a06005f089efcf6a9a451deb0dcbab3`;
+    const url = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/brewery/${breweryIndex}/beers?key=${API_KEY}`;
     const res = await axios.get(url);
     this.setState({ beerList: res.data["data"] });
     console.log(res.data);
@@ -46,7 +46,7 @@ class Brewery extends Component {
       <React.Fragment>
         <div>
           <img className="center" src={images.medium} alt="" />
-          <a href={website} target="_blank">
+          <a href={website} target="_blank" rel="noopener noreferrer">
             <h1>{name}</h1>
           </a>
           <div>{description}</div>
