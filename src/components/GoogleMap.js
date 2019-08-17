@@ -15,8 +15,8 @@ const GoogleMap = () => {
             <li>Now Open: </li>
             <li>Hours Of Opperation: </li>
             <li>Address: </li>
-            <li>4</li>
-            <li>5</li>
+            <li>Example: </li>
+            <li>Example: </li>
           </ul>
         </div>
       </div>

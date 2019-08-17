@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
+import SearchBar2 from "./SearchBar2";
 
 class NavBar extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class NavBar extends React.Component {
           </Link>
         </div>
         <div className="">
-          <SearchBar />
+          <SearchBar2 />
         </div>
       </nav>
     );

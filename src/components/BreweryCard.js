@@ -53,7 +53,7 @@ class BreweryCard extends React.Component {
     // const zipCode = this.props.zipCode
 
     return (
-      <div className="col-lg-3 col-sm-6 mt-4 mb-1">
+      <div className="col-lg-3 col-sm-6 col-8 mx-auto mt-4 mb-1">
         <StyledLink to={`brewery/${this.props.breweryIndex}`}>
           <Card className="card">
             <h5 className="card-header">{name}</h5> <br />

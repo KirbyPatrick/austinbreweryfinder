@@ -6,7 +6,7 @@ import BreweryCard from "./BreweryCard";
 
 class BreweryList extends Component {
   state = {
-    url: `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/locations?key=${API_KEY}&locality=Austin`,
+    url: `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/locations?key=${API_KEY}`,
     brewery: null
   };
 
@@ -36,13 +36,13 @@ class BreweryList extends Component {
             ))}
           </div>
         ) : (
-          // <h1 className="mt-5">Brewerys Loading...</h1>
+          // <h1 className="mt-5">Breweries Loading...</h1>
           <div className="container">
-            <div className="row">
+            <div className="row mt-5">
               <h1>Breweries Loading</h1>
-              <div class="spinner-border text-primary ml-4" role="status" />
-              <div class="spinner-border text-primary ml-4" role="status" />
-              <div class="spinner-border text-primary ml-4" role="status" />
+              <div className="spinner-border text-primary ml-4" role="status" />
+              <div className="spinner-border text-primary ml-4" role="status" />
+              <div className="spinner-border text-primary ml-4" role="status" />
             </div>
           </div>
         )}
