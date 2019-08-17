@@ -36,7 +36,15 @@ class BreweryList extends Component {
             ))}
           </div>
         ) : (
-          <h1>Brewerys Loading...</h1>
+          // <h1 className="mt-5">Brewerys Loading...</h1>
+          <div className="container">
+            <div className="row">
+              <h1>Breweries Loading</h1>
+              <div class="spinner-border text-primary ml-4" role="status" />
+              <div class="spinner-border text-primary ml-4" role="status" />
+              <div class="spinner-border text-primary ml-4" role="status" />
+            </div>
+          </div>
         )}
       </React.Fragment>
     );

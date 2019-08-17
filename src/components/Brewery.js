@@ -24,7 +24,7 @@ class Brewery extends Component {
     const url = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/brewery/${breweryIndex}?key=${API_KEY}`;
     const res = await axios.get(url);
     this.setState({ brewery: res.data["data"] });
-    console.log(res.data);
+    console.log("brewery", res.data);
     //Urls for brewery info
   }
 
@@ -33,10 +33,12 @@ class Brewery extends Component {
     const url = `https://cors-anywhere.herokuapp.com/http://api.brewerydb.com/v2/brewery/${breweryIndex}/beers?key=${API_KEY}`;
     const res = await axios.get(url);
     this.setState({ beerList: res.data["data"] });
-    console.log(res.data);
+    console.log("beer list", res.data);
     //Urls for brewery info
   }
+
   render() {
+    // console.log(this.state.brewery);
     const {
       name = "",
       description = "",
@@ -57,11 +59,11 @@ class Brewery extends Component {
         </div>
         <br />
         <h2 className="mb-3">Beers On Tap:</h2>
-        <table class="table">
+        <table className="table">
           <Tablecolumns />
           <tbody>
             {this.state.beerList.map(item => (
-              <BeerCard beer={item} />
+              <BeerCard beer={item} key={item.id} />
             ))}
           </tbody>
         </table>
