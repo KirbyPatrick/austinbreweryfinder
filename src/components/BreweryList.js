@@ -30,7 +30,9 @@ class BreweryList extends Component {
                 locationState={brewery.region}
                 zipCode={brewery.postalCode}
                 url={
-                  brewery.brewery.images ? brewery.brewery.images.medium : ""
+                  brewery.brewery.images
+                    ? brewery.brewery.images.medium
+                    : "https://via.placeholder.com/100"
                 }
               />
             ))}
