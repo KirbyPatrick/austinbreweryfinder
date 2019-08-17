@@ -3,6 +3,7 @@ import axios from "axios";
 import BeerCard from "./BeerCard";
 import Tablecolumns from "./Tablecolumns";
 import { API_KEY } from "../App";
+import GoogleMap from "./GoogleMap";
 
 class Brewery extends Component {
   state = {
@@ -50,8 +51,12 @@ class Brewery extends Component {
             <h1>{name}</h1>
           </a>
           <div>{description}</div>
+          <div>
+            <GoogleMap />
+          </div>
         </div>
         <br />
+        <h2 className="mb-3">Beers On Tap:</h2>
         <table class="table">
           <Tablecolumns />
           <tbody>

@@ -1,6 +1,6 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-import '../App.css';
+import { Link } from "react-router-dom";
+import "../App.css";
 import styled from "styled-components";
 
 const Card = styled.div`
@@ -9,7 +9,7 @@ const Card = styled.div`
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
-  -moz-user-select:none;
+  -moz-user-select: none;
   -website-user-select: none;
   user-select: none;
   -o-user-select: none;
@@ -28,15 +28,21 @@ const StyledLink = styled(Link)`
 `;
 
 class BreweryCard extends React.Component {
-  state ={
-    name: '',
-    imageUrl: '',
-    breweryIndex: ''
-  }
+  state = {
+    name: "",
+    imageUrl: "",
+    breweryIndex: ""
+  };
 
   render() {
-
-    const {name, streetAddress, city, locationState, zipCode, url} = this.props;
+    const {
+      name,
+      streetAddress,
+      city,
+      locationState,
+      zipCode,
+      url
+    } = this.props;
 
     console.log(url);
 
@@ -46,19 +52,21 @@ class BreweryCard extends React.Component {
     // const locationState = this.props.locationState;
     // const zipCode = this.props.zipCode
 
-    return(
+    return (
       <div className="col-med-3 col-sm-3 mb-5">
         <StyledLink to={`brewery/${this.props.breweryIndex}`}>
           <Card className="card">
-            <h5 className="card-header">{name}</h5> <br/>
-            <img src={url} alt=""/> <br/>
-            <h6 className="card-info mx-auto">{streetAddress}. <br/>
-            {city}, {locationState} {zipCode} <br/> <br/> </h6>
+            <h5 className="card-header">{name}</h5> <br />
+            <img src={url} alt="" /> <br />
+            <h6 className="card-info mx-auto">
+              {streetAddress}. <br />
+              {city}, {locationState} {zipCode} <br /> <br />{" "}
+            </h6>
           </Card>
         </StyledLink>
       </div>
     );
   }
-};
+}
 
 export default BreweryCard;

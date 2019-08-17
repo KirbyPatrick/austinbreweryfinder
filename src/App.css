@@ -1,3 +1,9 @@
+.boxy {
+  border: 1em;
+  border: dotted;
+  border-color: red;
+}
+
 .App {
   padding-top: 4rem;
   min-height: 100vh;

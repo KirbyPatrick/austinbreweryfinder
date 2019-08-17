@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 class NavBar extends React.Component {
   render() {
@@ -10,6 +11,9 @@ class NavBar extends React.Component {
           <Link className="titleFont text-white" to="/">
             Austin Brewery Finder
           </Link>
+        </div>
+        <div className="">
+          <SearchBar />
         </div>
       </nav>
     );

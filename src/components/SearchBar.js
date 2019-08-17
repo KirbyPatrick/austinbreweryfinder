@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 class SearchBar extends React.Component {
   render() {
-    return(
+    return (
       <form onSubmit={this.props.getBrewery}>
-        <input type="text" name="brewery" placeholder="Brewery..."></input>
+        <input type="text" name="brewery" placeholder="Brewery Name..." />
         <button>Search</button>
       </form>
     );
   }
-};
+}
 
 export default SearchBar;
