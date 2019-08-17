@@ -15,11 +15,12 @@ class SearchBar2 extends Component {
   render() {
     console.log(this.state.search);
     return (
-      <div>
+      <div className="d-flex justify-content-center">
         <input
           type="text"
           value={this.state.search}
           onChange={this.updateSearch.bind(this)}
+          placeholder="Brewery Name..."
         />
       </div>
     );

@@ -12,9 +12,6 @@ class NavBar extends React.Component {
             Austin Brewery Finder
           </Link>
         </div>
-        <div className="">
-          <SearchBar2 />
-        </div>
       </nav>
     );
   }

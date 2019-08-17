@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { API_KEY } from "../App";
-
 import BreweryCard from "./BreweryCard";
 
 class BreweryList extends Component {
@@ -16,8 +15,15 @@ class BreweryList extends Component {
   }
 
   render() {
+    //below is code to filter based on search bar value. not working because state.brewery
+    // = null at time of loading. React says can't filter null.
+
+    // let filteredBreweries = this.state.brewery.filter(brewery => {
+    //   return brewery.brewery.nameShortDisplay.indexOf(this.props.search) !== -1;
+    // });
     return (
       <React.Fragment>
+        {console.log("this.state", this.state)}
         {this.state.brewery ? (
           <div className="row">
             {this.state.brewery.map(brewery => (
@@ -38,12 +44,9 @@ class BreweryList extends Component {
             ))}
           </div>
         ) : (
-          // <h1 className="mt-5">Breweries Loading...</h1>
           <div className="container">
             <div className="row mt-5">
               <h1>Breweries Loading</h1>
-              <div className="spinner-border text-primary ml-4" role="status" />
-              <div className="spinner-border text-primary ml-4" role="status" />
               <div className="spinner-border text-primary ml-4" role="status" />
             </div>
           </div>

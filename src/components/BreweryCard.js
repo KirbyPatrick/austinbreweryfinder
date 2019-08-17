@@ -44,8 +44,6 @@ class BreweryCard extends React.Component {
       url
     } = this.props;
 
-    console.log(url);
-
     // const name = this.props.name;
     // const streetAddress = this.props.streetAddress;
     // const city = this.props.city;
