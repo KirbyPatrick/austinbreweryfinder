@@ -23,7 +23,7 @@ class BreweryList extends Component {
     // });
     return (
       <React.Fragment>
-        {console.log("this.state", this.state)}
+        {/* {console.log("this.state", this.state)} */}
         {this.state.brewery ? (
           <div className="row">
             {this.state.brewery.map(brewery => (

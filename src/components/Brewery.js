@@ -34,11 +34,10 @@ class Brewery extends Component {
     const res = await axios.get(url);
     this.setState({ beerList: res.data["data"] });
     console.log("beer list", res.data);
-    //Urls for brewery info
+    //Urls for beer info
   }
 
   render() {
-    // console.log(this.state.brewery);
     const {
       name = "",
       description = "",

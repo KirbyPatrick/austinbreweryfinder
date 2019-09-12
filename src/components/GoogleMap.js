@@ -4,7 +4,7 @@ class GoogleMap extends Component {
   state = {
     opened: "Yes (test)",
     hours: "9-5 (test)",
-    address: "102 Riverside Dr, Austin TX. 78745"
+    address: "102 Riverside Dr, Austin TX. 78745 (test)"
   };
 
   render() {
