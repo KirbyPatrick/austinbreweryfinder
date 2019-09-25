@@ -20,19 +20,19 @@ const Footer = () => {
         <div className="col d-flex justify-content-center border-top-5">
 
           <Social>
-            <a href="https://github.com/KirbyPatrick" target="_blank" rel="noopener">
+            <a href="https://github.com/KirbyPatrick" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-github mx-5 fa-3x"></i>
             </a>
           </Social>
           <Social>
 
-            <a href="https://twitter.com/Kirby_Patrick" target="_blank" rel="noopener">
+            <a href="https://twitter.com/Kirby_Patrick" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-twitter mx-5 fa-3x"></i>
             </a>
           </Social>
           <Social>
 
-            <a href="https://www.linkedin.com/in/patrick-d-kirby/" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/patrick-d-kirby/" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-linkedin mx-5 fa-3x"></i>
             </a>
           </Social>
