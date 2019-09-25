@@ -49,7 +49,7 @@ class Brewery extends Component {
         <div>
           <img className="center" src={images.medium} alt="" />
           <a href={website} target="_blank" rel="noopener noreferrer">
-            <h1>{name}</h1>
+            <h1 className="text-dark"><u>{name}</u></h1>
           </a>
           <div>{description}</div>
           <div>

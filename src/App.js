@@ -7,6 +7,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import DashBoard from "./components/DashBoard";
 import Brewery from "./components/Brewery";
+import Footer from "./components/Footer";
 
 // export const API_KEY = process.env.REACT_APP_API_KEY;
 export const API_KEY = "8a06005f089efcf6a9a451deb0dcbab3";
@@ -40,6 +41,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
+        <Footer />
       </Router>
     );
   }
